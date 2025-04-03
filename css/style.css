@@ -36,6 +36,7 @@ header>.rigth>img{
     width: 213px;
     height: 82px;
     margin-top: 8px;
+    cursor: pointer;
 }
 header>.left{
     width: 300px;
@@ -68,6 +69,7 @@ header>.left>div{
     border-radius: 71px;
     width: 71px;
     height: 69px;
+    cursor: pointer;
 }
 /********************* NAVs ***************/
 .ul-nav{
@@ -185,15 +187,13 @@ header>.left>div{
     margin: 0px 0px 0px 10px;
 }
 
-#container-principal, #container-home, #container-tipo-all, #container-suscripcion, #container-login, #container.faq{
+#container-principal, #container-home, #container-tipo-all, #container-suscripcion, #container-login, #container-faq, #container-ayuda{
     background-color: var(--Primario1);
    /* padding-bottom: 25px;*/
     overflow: hidden;
-}
-#container-principal{
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 /********************* HOME ***************/
 #container-home{
@@ -682,9 +682,6 @@ header>.left>div{
 #container-tipo-all{
     width: 96%;
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 #container-tipo-all>div{
     display: flex;
@@ -779,31 +776,31 @@ header>.left>div{
     align-items: center;
     display: flex;
     flex-direction: column;
-   }
-   .div-popUp-search{
+}
+.div-popUp-search{
     width: 1259px;
     height: 456px;
     border-radius: 20px;
     background: var(--Secundario1);
     margin-top: 37px;
-   }
-   .div-popUp-search>div{
+}
+.div-popUp-search>div{
     width: 77%;
     height: 36%;
     margin-left: 12%;
     margin-top: 8%;
     text-align: center;
     position: relative;
-   }
-   .div-popUp-search>div>h1{
+}
+.div-popUp-search>div>h1{
     color: #FFF;
     font-family: "Be Vietnam";
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-   }
-   .div-popUp-search>div>form{
+}
+.div-popUp-search>div>form{
     width: 100%;
     height: 77px;
     position: relative;
@@ -811,8 +808,8 @@ header>.left>div{
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-   }
-   .input-search{
+}
+.input-search{
     width: 86%;
     height: 77px;
     border-radius: 30px;
@@ -828,52 +825,49 @@ header>.left>div{
     font-weight: 300;
     line-height: normal;
     padding: 0px 90px 0px 45px;
-   }
-   .input-search:focus{
+}
+.input-search:focus{
     box-shadow: 0px 0px 20px -2px var(--Primario3) inset;
-   }
-   #btn-realizar-busqueda{
+}
+#btn-realizar-busqueda{
     background: none;
     position: absolute;
     z-index: 1;
     margin-right: 4%;
     margin-top: 1%;
     right: 0;
-   }
-   #btn-realizar-busqueda>img{
+}
+#btn-realizar-busqueda>img{
     width: 50px;
     height: 50px;
-   }
-   #btn-cerrar-popUp-search{
+}
+#btn-cerrar-popUp-search{
     width: 21px;
     height: 20px;
     margin: 25px 25px 0px 0px;
     float: right;
     background: none;
-   }
-   /***** fin BUSCADOR *****/
-   /********************* SUSCRIPCION ***************//*ACA*/
-   #container-suscripcion{/*ACA*/
+}
+/***** fin BUSCADOR *****/
+/********************* SUSCRIPCION ***************/
+#container-suscripcion{
     width: 97%;
     margin-top: 2.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 30px;
-   }
-   .header-pasos-suscripcion{
+}
+.header-pasos-suscripcion{
     width: 100%;
     height: 81px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-   }
-   .header-pasos-suscripcion>img{
+}
+.header-pasos-suscripcion>img{
     width: 57px;
     height: 54px;
-   }
-   .title-suscripcion{
+}
+.title-suscripcion{
     color: var(--Secundario4);
     text-align: center;
     font-family: "Be Vietnam";
@@ -881,9 +875,9 @@ header>.left>div{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 0px 0px 10px 0px;
-   }
-   .p-pasos{
+    margin: 0% 0% 0% 6%;
+}
+.p-pasos{
     color: var(--Secundario4);
     text-align: center;
     font-family: "Be Vietnam";
@@ -892,16 +886,16 @@ header>.left>div{
     font-weight: 400;
     line-height: normal;
     margin: 3% 4% 0% 0%;
-   }
-   /*PASO 1*/
-   .contaniner-cards-suscripcion{
+}
+/*PASO 1*/
+.contaniner-cards-suscripcion{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 1.5%;
-   }
-   .card-plan{
+}
+.card-plan{
     width: 311px;
     height: 432px;
     background: linear-gradient(180deg, var(--Primario2) 30%, var(--Primario3) 70%);
@@ -911,12 +905,12 @@ header>.left>div{
     align-items: center;
     margin-right: 22px;
     position: relative;
-   }
-   .card-plan-click{
+}
+.card-plan-click{
     background: var(--Secundario0);
     box-shadow: 0px 0px 10px 1px #DEC892;
-   }
-   .card-plan>h3{
+}
+.card-plan>h3{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 28px;
@@ -925,8 +919,8 @@ header>.left>div{
     line-height: normal;
     width: max-content;
     margin: 10% 0% 6% 0%;
-   }
-   .h6-precio-plan{
+ }
+.h6-precio-plan{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 24px;
@@ -935,8 +929,8 @@ header>.left>div{
     line-height: 20px;
     width: max-content;
     margin: 0% 0% 13% 0%;
-   }
-   .span-mensualidad-plan{
+}
+.span-mensualidad-plan{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 16px;
@@ -945,18 +939,18 @@ header>.left>div{
     line-height: normal;
     width: max-content;
     margin: 0px;
-   }
-   .icono-list-plan{
+}
+.icono-list-plan{
     width: 19px;
     height: 19px;
     margin-right: 10px;
-   }
-   .card-plan>ul{
+}
+.card-plan>ul{
     padding: 0px;
     width: 264px;
     margin-top: 0px;
-   }
-   .card-plan>ul>li{
+}
+.card-plan>ul>li{
     list-style: none;
     color: var(--Secundario4);
     font-family: "Be Vietnam";
@@ -969,8 +963,8 @@ header>.left>div{
     align-items: center;
     height: 20px;
     margin-bottom: 5px;
-   }
-   .p-info-footer-suscripciones,.p-info-pago-suscripciones{
+}
+.p-info-footer-suscripciones,.p-info-pago-suscripciones{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 16px;
@@ -979,8 +973,8 @@ header>.left>div{
     line-height: normal;
     width: max-content;
     margin: 3.5% 0% 4% 0%;
-   }
-   .btn-suscripciones{
+}
+.btn-suscripciones{
     width: 148px;
     height: 40px;
     border-radius: 10px;
@@ -994,17 +988,13 @@ header>.left>div{
     line-height: normal;
     padding-bottom: 5px;
     margin-bottom: 5%;
-   }
-   /*PASO 2*/
-   .container-pago-suscripcion{
-   
-   }
-   .info-plan-pago{
+}
+/*PASO 2*/
+.info-plan-pago{
     width: 709px;
     height: 113px;
-   }
-   
-   .h3-title-pago{
+} 
+.h3-title-pago{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 26px;
@@ -1013,8 +1003,8 @@ header>.left>div{
     line-height: normal;
     margin-top: 0px;
     margin-bottom: 5px;
-   }
-   .info-plan-pago>section, .container-perfil-suscripcion{
+}
+.info-plan-pago>section, .container-perfil-suscripcion{
     display: flex;
     flex-direction: row;
     height: 85px;
@@ -1022,22 +1012,22 @@ header>.left>div{
     border-radius: 5px;
     border: 0.5px solid rgba(255, 238, 238, 0.16);
     background: rgba(45, 82, 98, 0.44);
-   }
-   .info-plan-pago>section>div{
+}
+.info-plan-pago>section>div{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
-   }
-   .info-plan-pago>section>div>p{
+}
+.info-plan-pago>section>div>p{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-   }
-   .info-plan-pago>section>a{
+}
+.info-plan-pago>section>a{
     color: var(--Primario1);
     font-family: "Be Vietnam";
     font-size: 20px;
@@ -1046,36 +1036,36 @@ header>.left>div{
     line-height: normal;
     text-decoration-line: underline;
     margin-right: 20px;
-   }
-   .datos-de-pago{
+}
+.datos-de-pago{
     margin-top: 44px;
-   }
-   .section-inputs-suscripcion{
+}
+.section-inputs-suscripcion{
     width: 709px;
     height: 652px;
     border-radius: 5px;
     border: 0.5px solid rgba(255, 238, 238, 0.16);
     background: rgba(45, 82, 98, 0.44);
     padding-top: 6%;
-   }
-   .section-inputs-suscripcion>.container_label_input{
+}
+.section-inputs-suscripcion>.container_label_input{
     width: 56%;
     margin-left: 11%;
     margin-bottom: 2%;
     display: flex;
     flex-direction: column;
-   }
-   .section-inputs-suscripcion>div{
+}
+.section-inputs-suscripcion>div{
     width: 75%;
     margin-left: 11%;
     display: flex;
     flex-direction: row;
     justify-content: start;
-   }
-   .section-inputs-suscripcion>div>.container_label_input{
+}
+.section-inputs-suscripcion>div>.container_label_input{
     width: 146px;
-   }
-   .section-inputs-suscripcion>div>.container_label_input>p{
+}
+.section-inputs-suscripcion>div>.container_label_input>p{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 12px;
@@ -1084,29 +1074,29 @@ header>.left>div{
     line-height: normal;
     margin:0px;
     font-style: italic;
-   }
-   .div-tarjetas-imgs{
+ }
+.div-tarjetas-imgs{
     width: max-content;
     display: flex;
     flex-direction: row;
     margin-top: 3px;
-   }
-   .div-tarjetas-imgs>img{
+}
+.div-tarjetas-imgs>img{
     width: 52px;
     height: 29px;
     border-radius: 4px;
     margin-right: 12px;
-   }
-   #btn-pagar-suscripcion{
+}
+#btn-pagar-suscripcion{
     margin-left: 41%;
     margin-top: 12%;
-   }
-   /*PASO 3*/
-   .container-perfil-suscripcion{
+}
+/*PASO 3*/
+ .container-perfil-suscripcion{
     width: 53%;
     height: auto !important;
-   }
-   .section-paso3{
+}
+.section-paso3{
     border-radius: 0px;
     border: none;
     background: none;
@@ -1117,11 +1107,11 @@ header>.left>div{
     align-items: center;
     padding-top: 3%;
     width: 100%;
-   }
-   .section-paso3>div{
+}
+.section-paso3>div{
     margin-left: 0px !important;
-   }
-   .button-desplegables-pro{
+}
+.button-desplegables-pro{
     width: 56% !important;
     height: 87px;
     border: 1px solid rgba(255, 238, 238, 0.16);
@@ -1132,19 +1122,19 @@ header>.left>div{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3%;
-   }
-   .button-desplegables-pro>img{
+}
+.button-desplegables-pro>img{
     width: 45px;
     height: 34px;
     transform: rotate(90deg);
-   }
-   .button-desplegables-pro>div{
+}
+.button-desplegables-pro>div{
     width: 77%;
     display: flex;
     flex-direction: column;
     margin-left: 23px;
-   }
-   .button-desplegables-pro>div>p{
+}
+.button-desplegables-pro>div>p{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 20px;
@@ -1152,28 +1142,29 @@ header>.left>div{
     font-weight: 400;
     line-height: normal;
     margin: 0px;
-   }
-   .button-desplegables-pro>div>span{
+}
+.button-desplegables-pro>div>span{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-   }
-   #btn-listo-suscripcion{
+}
+#btn-listo-suscripcion{
     margin-top: 37px;
     margin-left: 7%;
-   }
-   /***** fin SUSCRIPCION *****/
-   /********************* LOGIN ***************/
-   #container-login{
+}
+/***** fin SUSCRIPCION *****/
+/********************* LOGIN ***************/
+#container-login{
     width: 100%;
+    display: block;
     height: 835px;
     position: relative;
     background: url("uploads/fondo_login.png") lightgray 50% / cover no-repeat
-   }
-   #login-cinta-chica-vertical{
+}
+#login-cinta-chica-vertical{
     position: absolute;
     z-index: 2;
     margin-left: 4%;
@@ -1183,13 +1174,13 @@ header>.left>div{
     animation-delay: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-   }
-   @keyframes animation_cinta_1{
+}
+ @keyframes animation_cinta_1{
     0% {transform: translateY(0px);}
     100% {transform: translateY(-523px);}
-   }
+}
    
-   #login-cinta-grande-uno{
+#login-cinta-grande-uno{
     position: absolute;
     z-index: 3;
     bottom: -13%;
@@ -1199,19 +1190,19 @@ header>.left>div{
     animation-duration: 23s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-   }
-   @keyframes animation_cinta_2{
+}
+@keyframes animation_cinta_2{
     0% {transform:rotate(51deg) translateX(36px) scale(2) translateY(0px);}
     100% {transform:rotate(51deg) translateX(36px) scale(2) translateY(750px);}
-   }
+}
    
-   #login-cinta-grande-dos{
+#login-cinta-grande-dos{
     position: absolute;
     z-index: 4;
     right: 7%;
     bottom: -11%;
-   }
-   #container-login>section{
+}
+#container-login>section{
     width: 590px;
     height: 458px;
     position: absolute;
@@ -1224,43 +1215,43 @@ header>.left>div{
     align-items: center;
     justify-content: center;
     margin: 6% 0% 0% 33%;
-   }
-   #container-login>section>h1{
+}
+#container-login>section>h1{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-   }
-   .formulario-login{
+}
+.formulario-login{
     width: 438px;
     height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-   }
-   .formulario-login>div{
+}
+.formulario-login>div{
     width: 100%;
-   }
-   .container_label_input{
+}
+.container_label_input{
     margin-bottom: 5px;
-   }
-   .container_label_input>label{
+}
+ .container_label_input>label{
     color: var(--Secundario4);
     font-family: "Be Vietnam";
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-   }
-   .container_label_input>input{
+}
+.container_label_input>input{
     width: 100%;
     height: 36.03px;
     border-radius: 3px;
     background: var(--Secundario4);
-   }
-   #btn-form-iniciar-sesion{
+}
+#btn-form-iniciar-sesion{
     width: 290px;
     height: 40px;
     border-radius: 10px;
@@ -1273,9 +1264,8 @@ header>.left>div{
     font-weight: 600;
     line-height: normal;
     margin-top: 10%;
-   }
-   
-   #link-suscribirse{
+} 
+#link-suscribirse{
     color: var(--Secundario4);
     text-align: center;
     font-family: "Be Vietnam";
@@ -1286,8 +1276,171 @@ header>.left>div{
     text-decoration-line: underline;
     cursor: pointer;
     margin: 12% 0% 4% 0%;
-   }
-   /***** fin LOGIN *****/
+}
+/***** fin LOGIN *****/
+/********************* FAQ ***************/
+#container-faq{
+    width: 52%;
+}
+#container-faq>h1{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#container-faq>section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div-desplegable-faq{
+    width: 100%;
+    height: 54px;
+    background: var(--Secundario2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.p-desplegable{
+    width: 85%;
+    height: 26px;
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.img-desplegable{
+    width: 18px;
+    height: 30px;
+    transform: rotate(90deg);
+    margin-right: 10px;
+
+}
+.desplegable-info{
+    width: 100%;
+    height: max-content;
+    padding: 2% 10% 2% 13%;
+    color: var(--Secundario4);
+    background: var(--Secundario1);
+    font-family: "Be Vietnam";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.footer-info-faq{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    margin-top: 75px;
+    margin-bottom: 150px;
+}
+.footer-info-faq>p{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+    margin-right: 10px;
+}
+.footer-info-faq>img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+/***** fin FAQ *****/
+/********************* AYUDA ***************/
+#container-ayuda{
+    width: 100%;
+}
+#container-ayuda>h1{
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#container-ayuda>div{
+    width: 53%;
+    border-radius:5px;
+    background: rgba(45, 82, 98, 0.44);
+    padding-top: 35px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 57px;
+}
+#container-ayuda>div>.container_label_input{
+    width: 71%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+#container-ayuda>div>.container_label_input>input{
+    width: 99%;
+}
+.captcha{
+    width: 37%;
+    height: 70.029px;
+    border-radius: 3px;
+    background: var(--Secundario3);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.captcha >label{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.captcha >input{
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    margin-left: 23px;
+    width: 25px;
+    height: 24.879px;
+}
+.captcha>img{
+    width: 58px;
+    height: 53.443px;
+    margin-left: 30px;
+}
+#btn-enviar-consulta{
+    margin-top: 7%;
+    margin-bottom: 12%;
+}
+#link-faq-desde-ayuda{
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+/***** fin AYUDA *****/
 /********************* FOOTER ***************/
 footer{
     height: 250px;

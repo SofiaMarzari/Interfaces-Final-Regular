@@ -39,14 +39,17 @@ function load_home(){
         $('#container-principal').html(response);
     
         $('#avatar-btn-header').click(function(){
-            $('#nav-avatar').toggle(1000);
+            $('#nav-avatar').toggle();
         });
     
         $('#btn-notifications').click(function(){
-            $('#nav-notificaciones').toggle(1000);
+            $('#nav-notificaciones').toggle();
         });
     
-        $("#nav_ayuda").click(load_faq); 
+        $("#nav_ayuda").click(function(){
+            load_ayuda();
+            $('#nav-avatar').toggle();
+        }); 
         // create_carruseles();
         $(".card-top-hover").hide();
     
@@ -178,6 +181,7 @@ function load_faq(){
             });
         });
         
+        $('#ayuda-link').click(load_ayuda);
     });
 }
    
@@ -227,7 +231,17 @@ function load_suscripcion(){
    
     });
 }
-   
+
+function load_ayuda(){
+    $.get('ayuda.html', function(response){
+        $('#container-principal').html(response);
+        $('.container_label_input').each(function(){
+            $(this).val("");
+        });
+        $('#link-faq-desde-ayuda').click(load_faq);
+    });
+}
+
 function view_paso_1(){
     $.get('paso_1.html', function(response){
         $('#container-subsecciones-suscripcion').html(response);
