@@ -5,7 +5,7 @@
     --Primario4: #303739;
     --Secundario0: #114358;
     --Secundario1: #1F4B5D;
-    --Ssecundario2: #2D5262;
+    --Secundario2: #2D5262;
     --Secundario3: #3A5A67;
     --Secundario4: #FDFDFD;
     --Acento: #F45E00;
@@ -121,6 +121,7 @@ header>.left>div{
     align-items: center;
     border-bottom: solid #F45E00 1px;
     padding-left: 18px;
+    cursor: pointer;
 }
 #nav-avatar>ul>li>p{
     margin-left: 4px;
@@ -184,9 +185,9 @@ header>.left>div{
     margin: 0px 0px 0px 10px;
 }
 
-#container-principal, #container-home, #container-tipo-all{
+#container-principal, #container-home, #container-tipo-all, #container-suscripcion, #container-login, #container.faq{
     background-color: var(--Primario1);
-    padding-bottom: 25px;
+   /* padding-bottom: 25px;*/
     overflow: hidden;
 }
 #container-principal{
@@ -197,6 +198,7 @@ header>.left>div{
 /********************* HOME ***************/
 #container-home{
     width: 100%;
+    margin-bottom: 30px;
 }
 /*** Galeria ***/
 .galeria-home{
@@ -676,12 +678,19 @@ header>.left>div{
 }
 /***** fin HOME *****/
 
-/********************* TIPO ALL FILTER ***************/
+/********************* FILTRO RESULTADOS ***************/
 #container-tipo-all{
     width: 96%;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#container-tipo-all>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 .title-tipo-all{
     color: var(--Secundario4);
@@ -690,15 +699,17 @@ header>.left>div{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 32px 0px 15px 0px;
+    margin: 2% 0% 0% 7%;
+    width: max-content;
 }
 .carrusel-filtro-generos{
-    width: 83%;
+    width: 92%;
     height: 68px;
     position: relative;
     overflow-x: clip;
     align-items: center;
     display: flex;
+    margin-top: 20px;
 }
 .div-carrusel-generos-translate{
     width: auto;
@@ -721,6 +732,7 @@ header>.left>div{
     font-weight: 400;
     line-height: normal;
     margin-right: 23px;
+    padding-bottom: 6px;
 }
 .btn-next-carrusel-genero,.btn-ant-carrusel-genero{
     width: 26px;
@@ -753,9 +765,529 @@ header>.left>div{
     grid-template-columns: auto auto auto auto auto;
     row-gap: 15px;
     margin-top: 50px;
+    width: 100%;
 }
-/***** fin TIPO ALL FILTER *****/
-
+/***** fin FILTRO RESULTADOS *****/
+/********************* BUSCADOR ***************/
+.popUp-buscador{ 
+    position: absolute;
+    z-index: 1500;
+    width: 100%;
+    height: 85%;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top: 96px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   }
+   .div-popUp-search{
+    width: 1259px;
+    height: 456px;
+    border-radius: 20px;
+    background: var(--Secundario1);
+    margin-top: 37px;
+   }
+   .div-popUp-search>div{
+    width: 77%;
+    height: 36%;
+    margin-left: 12%;
+    margin-top: 8%;
+    text-align: center;
+    position: relative;
+   }
+   .div-popUp-search>div>h1{
+    color: #FFF;
+    font-family: "Be Vietnam";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+   }
+   .div-popUp-search>div>form{
+    width: 100%;
+    height: 77px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+   }
+   .input-search{
+    width: 86%;
+    height: 77px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 238, 238, 0.16);
+    background: var(--Secundario4);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    color: var(--Primario3);
+    font-family: "Be Vietnam";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 0px 90px 0px 45px;
+   }
+   .input-search:focus{
+    box-shadow: 0px 0px 20px -2px var(--Primario3) inset;
+   }
+   #btn-realizar-busqueda{
+    background: none;
+    position: absolute;
+    z-index: 1;
+    margin-right: 4%;
+    margin-top: 1%;
+    right: 0;
+   }
+   #btn-realizar-busqueda>img{
+    width: 50px;
+    height: 50px;
+   }
+   #btn-cerrar-popUp-search{
+    width: 21px;
+    height: 20px;
+    margin: 25px 25px 0px 0px;
+    float: right;
+    background: none;
+   }
+   /***** fin BUSCADOR *****/
+   /********************* SUSCRIPCION ***************//*ACA*/
+   #container-suscripcion{/*ACA*/
+    width: 97%;
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+   }
+   .header-pasos-suscripcion{
+    width: 100%;
+    height: 81px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .header-pasos-suscripcion>img{
+    width: 57px;
+    height: 54px;
+   }
+   .title-suscripcion{
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px 0px 10px 0px;
+   }
+   .p-pasos{
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    margin: 3% 4% 0% 0%;
+   }
+   /*PASO 1*/
+   .contaniner-cards-suscripcion{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5%;
+   }
+   .card-plan{
+    width: 311px;
+    height: 432px;
+    background: linear-gradient(180deg, var(--Primario2) 30%, var(--Primario3) 70%);
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 22px;
+    position: relative;
+   }
+   .card-plan-click{
+    background: var(--Secundario0);
+    box-shadow: 0px 0px 10px 1px #DEC892;
+   }
+   .card-plan>h3{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: max-content;
+    margin: 10% 0% 6% 0%;
+   }
+   .h6-precio-plan{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: max-content;
+    margin: 0% 0% 13% 0%;
+   }
+   .span-mensualidad-plan{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: max-content;
+    margin: 0px;
+   }
+   .icono-list-plan{
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+   }
+   .card-plan>ul{
+    padding: 0px;
+    width: 264px;
+    margin-top: 0px;
+   }
+   .card-plan>ul>li{
+    list-style: none;
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin-bottom: 5px;
+   }
+   .p-info-footer-suscripciones,.p-info-pago-suscripciones{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: max-content;
+    margin: 3.5% 0% 4% 0%;
+   }
+   .btn-suscripciones{
+    width: 148px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--Acento);
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 5px;
+    margin-bottom: 5%;
+   }
+   /*PASO 2*/
+   .container-pago-suscripcion{
+   
+   }
+   .info-plan-pago{
+    width: 709px;
+    height: 113px;
+   }
+   
+   .h3-title-pago{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 5px;
+   }
+   .info-plan-pago>section, .container-perfil-suscripcion{
+    display: flex;
+    flex-direction: row;
+    height: 85px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid rgba(255, 238, 238, 0.16);
+    background: rgba(45, 82, 98, 0.44);
+   }
+   .info-plan-pago>section>div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+   }
+   .info-plan-pago>section>div>p{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   }
+   .info-plan-pago>section>a{
+    color: var(--Primario1);
+    font-family: "Be Vietnam";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    margin-right: 20px;
+   }
+   .datos-de-pago{
+    margin-top: 44px;
+   }
+   .section-inputs-suscripcion{
+    width: 709px;
+    height: 652px;
+    border-radius: 5px;
+    border: 0.5px solid rgba(255, 238, 238, 0.16);
+    background: rgba(45, 82, 98, 0.44);
+    padding-top: 6%;
+   }
+   .section-inputs-suscripcion>.container_label_input{
+    width: 56%;
+    margin-left: 11%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+   }
+   .section-inputs-suscripcion>div{
+    width: 75%;
+    margin-left: 11%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+   }
+   .section-inputs-suscripcion>div>.container_label_input{
+    width: 146px;
+   }
+   .section-inputs-suscripcion>div>.container_label_input>p{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin:0px;
+    font-style: italic;
+   }
+   .div-tarjetas-imgs{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px;
+   }
+   .div-tarjetas-imgs>img{
+    width: 52px;
+    height: 29px;
+    border-radius: 4px;
+    margin-right: 12px;
+   }
+   #btn-pagar-suscripcion{
+    margin-left: 41%;
+    margin-top: 12%;
+   }
+   /*PASO 3*/
+   .container-perfil-suscripcion{
+    width: 53%;
+    height: auto !important;
+   }
+   .section-paso3{
+    border-radius: 0px;
+    border: none;
+    background: none;
+    padding-bottom: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    width: 100%;
+   }
+   .section-paso3>div{
+    margin-left: 0px !important;
+   }
+   .button-desplegables-pro{
+    width: 56% !important;
+    height: 87px;
+    border: 1px solid rgba(255, 238, 238, 0.16);
+    background: var(--Primario3);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+   }
+   .button-desplegables-pro>img{
+    width: 45px;
+    height: 34px;
+    transform: rotate(90deg);
+   }
+   .button-desplegables-pro>div{
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 23px;
+   }
+   .button-desplegables-pro>div>p{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+   }
+   .button-desplegables-pro>div>span{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+   }
+   #btn-listo-suscripcion{
+    margin-top: 37px;
+    margin-left: 7%;
+   }
+   /***** fin SUSCRIPCION *****/
+   /********************* LOGIN ***************/
+   #container-login{
+    width: 100%;
+    height: 835px;
+    position: relative;
+    background: url("uploads/fondo_login.png") lightgray 50% / cover no-repeat
+   }
+   #login-cinta-chica-vertical{
+    position: absolute;
+    z-index: 2;
+    margin-left: 4%;
+    transform: translateY(834px);
+    animation-name: animation_cinta_1;
+    animation-duration: 14s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   }
+   @keyframes animation_cinta_1{
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-523px);}
+   }
+   
+   #login-cinta-grande-uno{
+    position: absolute;
+    z-index: 3;
+    bottom: -13%;
+    right: 17%;
+    transform: rotate(51deg) translateX(36px) scale(2) translateY(-936px);
+    animation-name: animation_cinta_2;
+    animation-duration: 23s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   }
+   @keyframes animation_cinta_2{
+    0% {transform:rotate(51deg) translateX(36px) scale(2) translateY(0px);}
+    100% {transform:rotate(51deg) translateX(36px) scale(2) translateY(750px);}
+   }
+   
+   #login-cinta-grande-dos{
+    position: absolute;
+    z-index: 4;
+    right: 7%;
+    bottom: -11%;
+   }
+   #container-login>section{
+    width: 590px;
+    height: 458px;
+    position: absolute;
+    z-index: 5;
+    border-radius: 5px;
+    background: var(--Primario2);
+    box-shadow: 0px 0px 15px 0px var(--Secundario4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6% 0% 0% 33%;
+   }
+   #container-login>section>h1{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+   }
+   .formulario-login{
+    width: 438px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .formulario-login>div{
+    width: 100%;
+   }
+   .container_label_input{
+    margin-bottom: 5px;
+   }
+   .container_label_input>label{
+    color: var(--Secundario4);
+    font-family: "Be Vietnam";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+   }
+   .container_label_input>input{
+    width: 100%;
+    height: 36.03px;
+    border-radius: 3px;
+    background: var(--Secundario4);
+   }
+   #btn-form-iniciar-sesion{
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--Acento);
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 10%;
+   }
+   
+   #link-suscribirse{
+    color: var(--Secundario4);
+    text-align: center;
+    font-family: "Be Vietnam";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration-line: underline;
+    cursor: pointer;
+    margin: 12% 0% 4% 0%;
+   }
+   /***** fin LOGIN *****/
 /********************* FOOTER ***************/
 footer{
     height: 250px;
