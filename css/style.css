@@ -87,6 +87,7 @@ header>.left>div{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    cursor: pointer;
 }
 #nav-avatar{
     width: 214px;

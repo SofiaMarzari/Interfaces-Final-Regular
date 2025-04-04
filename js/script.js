@@ -4,32 +4,7 @@ $( document ).ready(function() {
     $('#nav-notificaciones').hide();
    
     $(".popUp-buscador").hide(); 
-   
-    $('.nav-home').click(load_home);
-   
-    $('#nav-peliculas').click(function(){
-        load_filtros_resultados(true,false);
-    });
-   
-    $('#nav-series').click(function(){
-        load_filtros_resultados(false,false);
-    });
-   
-    $('#btn-realizar-busqueda').click(function(){
-        let valBusqueda = $('#input-search').val();
-        $(".popUp-buscador").hide();
-        load_filtros_resultados(false,true,valBusqueda);
-        $('#input-search').val("");
-    });
-   
-    $('#btn-search').click(function(){ 
-        $(".popUp-buscador").show();
-    });
-    
-    $('#btn-cerrar-popUp-search').click(function(){ 
-        $(".popUp-buscador").hide();
-    });
-   
+  
     load_login();
    
 });
@@ -37,7 +12,29 @@ $( document ).ready(function() {
 function load_home(){
     $.get('home.html', function(response){
         $('#container-principal').html(response);
+        $('.nav-home').click(load_home);
+        $('#nav-peliculas').click(function(){
+            load_filtros_resultados(true,false);
+        });
     
+        $('#nav-series').click(function(){
+            load_filtros_resultados(false,false);
+        });
+    
+        $('#btn-realizar-busqueda').click(function(){
+            let valBusqueda = $('#input-search').val();
+            $(".popUp-buscador").hide();
+            load_filtros_resultados(false,true,valBusqueda);
+            $('#input-search').val("");
+        });
+    
+        $('#btn-search').click(function(){ 
+            $(".popUp-buscador").show();
+        });
+        
+        $('#btn-cerrar-popUp-search').click(function(){ 
+            $(".popUp-buscador").hide();
+        });
         $('#avatar-btn-header').click(function(){
             $('#nav-avatar').toggle();
         });
@@ -108,7 +105,7 @@ function btn_next_carrusel(){
             $(this).toggleClass("btn-carrusel-hover");
         });
         $( this ).click(function(){
-            $(".btn-ant-carrusel").show(); 
+            $(this).siblings(".btn-ant-carrusel").show(); 
             let val_x = $( this ).siblings('.div-carrusel-translate').attr("data-valx");
             val_x = val_x-17;
             $( this ).siblings('.div-carrusel-translate').css(
@@ -121,7 +118,7 @@ function btn_next_carrusel(){
             $( this ).siblings('.div-carrusel-translate').attr("data-valx", val_x);
             //let id_carrusel = $(this).attr("data-idcarrusel");
             if((val_x == 0) || (val_x == "")){
-                $(".btn-ant-carrusel").hide();  
+                $(this).siblings(".btn-ant-carrusel").hide();  
             }
         });
     });
@@ -145,7 +142,7 @@ function btn_ant_carrusel(){
             $( this ).siblings('.div-carrusel-translate').attr("data-valx", val_x);
             //let id_carrusel = $(this).attr("data-idcarrusel");
             if((val_x == 0) || (val_x == "")){
-                $(".btn-ant-carrusel").hide();  
+                $(this).siblings(".btn-ant-carrusel").hide();  
             }
         });
     });
