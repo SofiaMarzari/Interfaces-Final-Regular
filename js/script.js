@@ -50,6 +50,14 @@ function load_home(){
             load_ayuda();
             $('#nav-avatar').toggle();
         }); 
+
+        $('.btn-view-detail').each(function(){
+            $(this).click(function(){
+                let dataIdDetalle = $(this).attr('data-id');
+                load_detalle(dataIdDetalle);
+            });
+        });
+
         // create_carruseles();
         $(".card-top-hover").hide();
     
@@ -85,50 +93,8 @@ function load_home(){
             });
         });
     
-        $('.btn-next-carrusel').each(function() {
-            $( this ).hover(function(){
-                $(this).toggleClass("btn-carrusel-hover");
-            });
-            $( this ).click(function(){
-                $(".btn-ant-carrusel").show(); 
-                let val_x = $( this ).siblings('.div-carrusel-translate').attr("data-valx");
-                val_x = val_x-17;
-                $( this ).siblings('.div-carrusel-translate').css(
-                    {
-                    "transform": "translateX("+val_x+"%)", 
-                    "transition": "1s"
-                    
-                    }
-                );
-                $( this ).siblings('.div-carrusel-translate').attr("data-valx", val_x);
-                //let id_carrusel = $(this).attr("data-idcarrusel");
-                if((val_x == 0) || (val_x == "")){
-                    $(".btn-ant-carrusel").hide(); 
-                }
-            });
-        });
-    
-        $('.btn-ant-carrusel').each(function() {
-            $( this ).hover(function(){
-                $(this).toggleClass("btn-carrusel-hover");
-            });
-            $( this ).click(function(){
-                let val_x = $( this ).siblings('.div-carrusel-translate').attr("data-valx");
-                val_x = parseInt(val_x)+17;
-                $( this ).siblings('.div-carrusel-translate').css(
-                    {
-                    "transform": "translateX("+val_x+"%)", 
-                    "transition": "1s"
-                    
-                    }
-                );
-                $( this ).siblings('.div-carrusel-translate').attr("data-valx", val_x);
-                //let id_carrusel = $(this).attr("data-idcarrusel");
-                if((val_x == 0) || (val_x == "")){
-                    $(".btn-ant-carrusel").hide(); 
-                }
-            });
-        });
+       btn_next_carrusel();
+       btn_ant_carrusel();
     
         $('#btn-top-next').hover(function(){
             $(this).toggleClass("btns-top-hover");
@@ -136,7 +102,120 @@ function load_home(){
     });
     
 }
-   
+function btn_next_carrusel(){
+    $('.btn-next-carrusel').each(function() {
+        $( this ).hover(function(){
+            $(this).toggleClass("btn-carrusel-hover");
+        });
+        $( this ).click(function(){
+            $(".btn-ant-carrusel").show(); 
+            let val_x = $( this ).siblings('.div-carrusel-translate').attr("data-valx");
+            val_x = val_x-17;
+            $( this ).siblings('.div-carrusel-translate').css(
+                {
+                    "transform": "translateX("+val_x+"%)", 
+                    "transition": "1s"
+
+                }
+            );
+            $( this ).siblings('.div-carrusel-translate').attr("data-valx", val_x);
+            //let id_carrusel = $(this).attr("data-idcarrusel");
+            if((val_x == 0) || (val_x == "")){
+                $(".btn-ant-carrusel").hide();  
+            }
+        });
+    });
+}
+
+function btn_ant_carrusel(){
+    $('.btn-ant-carrusel').each(function() {
+        $( this ).hover(function(){
+            $(this).toggleClass("btn-carrusel-hover");
+        });
+        $( this ).click(function(){
+            let val_x = $( this ).siblings('.div-carrusel-translate').attr("data-valx");
+            val_x = parseInt(val_x)+17;
+            $( this ).siblings('.div-carrusel-translate').css(
+                {
+                    "transform": "translateX("+val_x+"%)", 
+                    "transition": "1s"
+
+                }
+            );
+            $( this ).siblings('.div-carrusel-translate').attr("data-valx", val_x);
+            //let id_carrusel = $(this).attr("data-idcarrusel");
+            if((val_x == 0) || (val_x == "")){
+                $(".btn-ant-carrusel").hide();  
+            }
+        });
+    });
+}
+
+function load_detalle(dataId){
+    $.get('detalle.html', function(response){
+        $('#container-principal').html(response);
+
+        $('.label-superior-btn-circle').each(function(){
+            $(this).toggle();
+        });
+
+        $(".btn-ant-carrusel").hide(); 
+
+        btn_next_carrusel();
+        btn_ant_carrusel();
+
+        $('.popUp-preview').each(function() {
+            $( this ).hide();
+        }); 
+
+        $('.section-detalle').show();
+        $('.section-carrusel-sugerencia').hide();
+        $('.section-episodios').hide();
+
+        $('#solapa-detalle').click(function(){
+            $('.section-detalle').show();
+            $('.section-carrusel-sugerencia').hide();
+            $('.section-episodios').hide();
+        });
+        $('#solapa-episodios').click(function(){
+            $('.section-detalle').hide();
+            $('.section-carrusel-sugerencia').hide();
+            $('.section-episodios').show();
+            $('#list-temporadas').hide();
+            $('#btn-select-deplegables-temp').click(function(){
+                $('#list-temporadas').toggle();
+            });
+            $('.select-li-temporadas').each(function(){
+                $(this).click(function(){
+                    let valTemp = $(this).text();
+                    $('#data-temporada-seleccionada').html(valTemp);
+                    $('#list-temporadas').toggle();
+                });
+            });
+            $('.icono-play-episodio-card').each(function(){
+                $(this).hide();
+            });
+            $('.card-episodio').each(function(){
+                $(this).hover(function(){
+                    $(this).children('.icono-play-episodio-card').toggle();
+                    $(this).children('img').toggleClass('card-episodio-img-hover',1000);
+                });
+            });
+        });
+        $('#solapa-sugerencia').click(function(){
+            $('.section-detalle').hide();
+            $('.section-carrusel-sugerencia').show();
+            $('.section-episodios').hide();
+        });
+
+        $('.article-btn-circle').each(function(){
+            $(this).hover(function(){
+                $(this).children('.label-superior-btn-circle').toggle();
+            });
+        });
+        console.log(dataId);
+    });
+}
 function load_faq(){
     $.get('faq.html', function(response){
         $('#container-principal').html(response);
@@ -248,6 +327,9 @@ function view_paso_1(){
         $('.flecha_back').attr("data-direccionBack", "login");
         $('.p-pasos').html("Paso 1/3");
         $('.title-suscripcion').html("Elige tu plan");
+        $('.title-suscripcion').css({
+            "marginLeft" : "42% !important"
+        });
         $('#btn-continuar-suscripcion').click(view_paso_2);
     });
 }
@@ -258,6 +340,9 @@ function view_paso_2(){
         $('.flecha_back').attr("data-direccionBack", "paso_1");
         $('.p-pasos').html("Paso 2/3");
         $('.title-suscripcion').html("Pago");
+        $('.title-suscripcion').css({
+            "marginLeft" : "46% !important"
+        });
         $('#btn-pagar-suscripcion').click(view_paso_3);
     });
 }
@@ -268,6 +353,9 @@ function view_paso_3(){
         $('.flecha_back').attr("data-direccionBack", "paso_2");
         $('.p-pasos').html("Paso 3/3");
         $('.title-suscripcion').html("Crear perfil");
+        $('.title-suscripcion').css({
+            "marginLeft" : "42% !important"
+        });
         $('#btn-listo-suscripcion').click(load_home);
     });
 }
